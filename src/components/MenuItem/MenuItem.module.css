@@ -1,0 +1,10 @@
+.content {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
+.text{
+    font-size: 50px;
+    font-weight: bold;
+}

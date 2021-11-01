@@ -1,0 +1,16 @@
+
+.errorMsg{
+    color: rgb(226, 45, 45);
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 0.5em;
+}
+
+.editBtn{
+    margin: 0.2em;
+    width: 60px;
+}
+
+.hideBtn{
+    visibility: hidden;
+}

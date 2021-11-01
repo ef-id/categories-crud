@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Category from './components/Category/Category';
+import MenuItem from './components/MenuItem/MenuItem';
+import { Container, Row, Col } from 'react-bootstrap'
+import Header from './components/Header/Header';
+
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Container fluid>
+			<Row auto>
+				<Col xs="auto"><Header /></Col>
+				<Col>
+					<Switch>
+						<Route exact path="/" ><MenuItem name="Dashboard" /></Route>
+						<Route path="/posts"><MenuItem name="Posts" /></Route>
+						<Route path="/categories" component={Category} />
+						<Route path="/pages"><MenuItem name="Pages" /></Route>
+						<Route path="/settings"><MenuItem name="Settings" /></Route>
+					</Switch>
+				</Col>
+
+			</Row>
+
+
+
+		</Container>
+	);
 }
 
 export default App;
